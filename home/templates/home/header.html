@@ -1,0 +1,77 @@
+{% load static %}
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="{% static '' %}images/InsistentTautGodwit-small.gif" alt="#" />
+        </div>
+    </div>
+    <!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Start header -->
+    <header class="top-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="{% static '' %}images/output-onlinepngtools (2) (1).png" alt="image"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                       
+                        
+                        <li><a class="nav-link active" href="/">Home</a></li>
+                        <li><a class="nav-link" href="{% url 'home' %}">Job Search</a></li>
+                        
+                        <li><a class="nav-link" href="{% url 'my-profile' %}">My Profile</a></li>
+                        
+                        <li><a class="nav-link" href="{% url 'intelligent-search' %}">Get Relevant Jobs</a></li>
+                        <li><a class="nav-link" href="{% url 'account' %}">My Account</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a class="nav-link" href="http://127.0.0.1:5000/" >Chatbot</a></li>
+                        <li><a class="nav-link" href="{% url 'logout' %}" >Logout</a></li>
+                        <li><a class="nav-link" href="{% url 'add-job' %}" >Recruiters/ Employers</a></li>
+                        <li><a class="nav-link" href="{% url 'search-candidates' %}" >Profile Search</a></li>
+                        {% else %}
+                        <li><a class="nav-link" href="{% url 'login' %}" >Login</a></li>
+                        <li><a class="nav-link" href="{% url 'detail-recruiters' %}" >Recruiters/ Employers</a></li>
+                        {% endif %}
+                        
+
+                      
+
+                          
+
+
+                   
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="Search">
+                    <a class="search-btn">
+                        <img src="{% static '' %}images/search_icon.png" alt="#" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+      <!--<div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+        <ul class="navbar-nav">
+        <li><a href="/" class="nav-link active">Home</a></li>
+        <li><a href="{% url 'home' %}" class="nav-link">Job Search</a></li>
+        <li><a href="{% url 'my-profile' %}" class="nav-link">My Profile </a></li>
+        <li><a href="{% url 'intelligent-search' %}" class="nav-link">Get Relevant Jobs</a></li>
+        <li><a href="{% url 'account' %}" class="nav-link">My Account</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+        <li><a href="{% url 'add-job' %}" class="nav-link">Recruiters/ Employers</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+        <li><a href="{% url 'detail-recruiters' %}" class=>Recruiters/ Employers</a></li>
+        {% endif %}
+
+      </ul>
+    </div>-->
+  </header>
+  <!-- Header ends here -->

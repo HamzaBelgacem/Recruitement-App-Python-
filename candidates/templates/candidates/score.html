@@ -1,0 +1,61 @@
+{% extends "home/homebase.html" %} {% load static %} {% block content %}
+<br /><br />
+<div>
+  <h3 class="text-center"><b>Resume Score</b></h3>
+  <hr my-2 />
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="card card-signin my-2">
+        <span class="ml-3 mt-3">
+          <a href="#"
+            ><h4 class="text-dark">
+              <b>Resume</b>
+            </h4></a
+          >
+
+          <p>
+            Resume:
+            <a href="{{ data.resume.url }}">Click to View/Download</a>
+          </p>
+          <p style="font-size: 15px">
+            <a href="#"></a>
+          </p>
+        </span>
+        <div class="card-footer">
+          <span style="font-size: 14px"
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-6">
+        <div class="card card-signin my-2">
+          <span class="ml-3 mt-3">
+            <a href="#"
+              ><h4 class="text-dark">
+                <b>Resume Score</b>
+              </h4></a
+            >
+            {% for i in liste %}
+            <p style="font-size: 17px">
+              {{i}}<br />
+            </p>
+            {% endfor %}
+            <p style="font-size: 15px">
+              <a href="#"></a>
+            </p>
+          </span>
+          <div class="card-footer">
+            <span style="font-size: 14px"
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+{% endblock content %}
